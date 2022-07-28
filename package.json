@@ -1,5 +1,6 @@
 {
   "name": "@sn/eslint-plugin",
+  "type": "module",
   "license": "MIT",
   "version": "1.0.0",
   "description": "ESLint plugin for Sleepnumber",
@@ -9,13 +10,11 @@
     "url": "https://github.com/SleepNumber/eslint-plugin-sn.git"
   },
   "scripts": {
-    "lint": "eslint ./"
+    "prettier": "prettier --write './**/*.{js,json}'",
+    "prettier:check": "prettier --list-different './**/*.{js,json}'"
   },
   "devDependencies": {
-    "eslint": "^8.5.0"
-  },
-  "peerDependencies": {
-    "eslint": "^8.5.0"
+    "prettier": "^2.7.1"
   },
   "engines": {
     "node": ">=16.0.0"
