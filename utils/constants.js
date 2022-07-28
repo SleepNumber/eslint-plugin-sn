@@ -1,8 +1,10 @@
-export const JSX_TEXT = "JSXText";
-export const JSX_ELEMENT = "JSXElement";
-export const JSX_EXPRESSION_CONTAINER = "JSXExpressionContainer";
-export const LITERAL = "Literal";
-export const IDENTIFIER = "Identifier";
-export const TEMPLATE_LITERAL = "TemplateLiteral";
-export const CONDITIONAL_EXPRESSION = "ConditionalExpression";
-export const LOGICAL_EXPRESSION = "LogicalExpression";
+module.exports = {
+  JSX_TEXT: "JSXText",
+  JSX_ELEMENT: "JSXElement",
+  JSX_EXPRESSION_CONTAINER: "JSXExpressionContainer",
+  LITERAL: "Literal",
+  IDENTIFIER: "Identifier",
+  TEMPLATE_LITERAL: "TemplateLiteral",
+  CONDITIONAL_EXPRESSION: "ConditionalExpression",
+  LOGICAL_EXPRESSION: "LogicalExpression",
+};

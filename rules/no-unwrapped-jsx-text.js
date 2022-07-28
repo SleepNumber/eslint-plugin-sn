@@ -1,22 +1,22 @@
-import {
+const {
   removeSpecialCharacters,
   filterSiblings,
   jsxTextFixer,
-} from "../utils/jsx.js";
+} = require("../utils/jsx");
 
-import {
+const {
   LITERAL,
   TEMPLATE_LITERAL,
   LOGICAL_EXPRESSION,
   CONDITIONAL_EXPRESSION,
   JSX_ELEMENT,
   JSX_TEXT,
-} from "../utils/constants";
+} = require("../utils/constants");
 
 const RULE_DESCRIPTION =
   "JSX text that share a common parent with other elements should be wrapped by a <span> tag";
 
-const rule = {
+module.exports = {
   meta: {
     type: "problem",
     fixable: "code",
@@ -99,5 +99,3 @@ const rule = {
     },
   }),
 };
-
-export default rule;

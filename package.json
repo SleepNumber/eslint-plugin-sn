@@ -1,6 +1,5 @@
 {
   "name": "@sn/eslint-plugin",
-  "type": "module",
   "license": "MIT",
   "version": "1.0.0",
   "description": "ESLint plugin for Sleepnumber",

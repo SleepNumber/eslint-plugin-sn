@@ -1,4 +1,4 @@
-import {
+const {
   LITERAL,
   JSX_TEXT,
   JSX_ELEMENT,
@@ -6,11 +6,11 @@ import {
   LOGICAL_EXPRESSION,
   CONDITIONAL_EXPRESSION,
   JSX_EXPRESSION_CONTAINER,
-} from "./constants.js";
+} = require("./constants");
 
 const specialCharacters = /(\n)|(\t)|(\s)|(\r)|(\f)|(\v)/;
 
-export function removeSpecialCharacters(text) {
+function removeSpecialCharacters(text) {
   return text.replace(/(\n)|(\t)|(\s)|(\r)|(\f)|(\v)|(&[a-z]+;)/gm, "");
 }
 function isWhitespace(text) {
@@ -28,7 +28,7 @@ function shouldLintExpression(expression) {
   );
 }
 
-export function filterSiblings(self, children = []) {
+function filterSiblings(self, children = []) {
   return children.filter(
     ({ range, type, value, expression }) =>
       range[0] !== self[0] &&
@@ -40,7 +40,7 @@ export function filterSiblings(self, children = []) {
   );
 }
 
-export function jsxTextFixer(element) {
+function jsxTextFixer(element) {
   let loc = {
     start: { line: undefined, column: undefined },
     end: { line: undefined, column: undefined },
@@ -109,3 +109,5 @@ export function jsxTextFixer(element) {
 
   return { loc, text: fixed.join("\n") };
 }
+
+module.exports = { jsxTextFixer, removeSpecialCharacters, filterSiblings };

@@ -1,4 +1,4 @@
-import no_unwrapped_jsx_text from "./rules/no-unwrapped-jsx-text";
+const no_unwrapped_jsx_text = require("./rules/no-unwrapped-jsx-text");
 
 const allRules = {
   "no-unwrapped-jsx-text": no_unwrapped_jsx_text,
@@ -14,12 +14,10 @@ const rulesConfig = {
   },
 };
 
-const plugin = {
+module.exports = {
   rules: allRules,
   configs: {
     recommended: rulesConfig,
     all: rulesConfig,
   },
 };
-
-export default plugin;
